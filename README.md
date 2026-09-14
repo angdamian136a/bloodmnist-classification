@@ -12,7 +12,7 @@ With a background in biomedical science and bioinformatics (and biobusiness), I 
 
 But this will be my first dedicated ML project and a genuine foray into the field of artificial intelligence (AI), where I expect to tread unknown waters on my own and (hopefully) find my footing as a new 'AI initiate'. Through this exercise, I should develop a more fundamental understanding of ML by implementing and comparing different model families on a biomedical image classification problem. 
 
-## Dataaset
+## Dataset
 
 BloodMNIST is part of the MedMNIST collection and contains 28 × 28 RGB images from eight blood-cell classes.
 
