@@ -14,12 +14,12 @@ But this will be my first dedicated ML project and a genuine foray into the fiel
 
 ## Dataset
 
-BloodMNIST is part of the MedMNIST collection and contains 28 × 28 RGB images from eight blood-cell classes.
+BloodMNIST is part of the MedMNIST collection and contains 28 × 28 RGB images from eight blood-cell classes. The dataset consists of a total of 17,092 samples, of which 11,959 (70%) belong to the training set, 1,712 (10%) belong to the validation set and 3,421 (20%) belong to the test set.
 
 ## Planned Analysis
 
 - Exploratory data analysis
-- Linear classification baseline
+- Linear models
 - Support vector machines (SVMs)
 - Decision trees and random forests
 - Ensemble methods
@@ -27,6 +27,21 @@ BloodMNIST is part of the MedMNIST collection and contains 28 × 28 RGB images f
 - Multilayer perceptrons (MLPs)
 - Convolutional neural networks (CNNs)
 
-## Setup 
+## Strategy 
 
-Work in progress.
+1. Train models on training data using default model parameters (baseline models)
+2. Evaluate each model's performance on the validation data
+3. Perform 10-fold cross-validation of baseline models on training set
+4. Evaluate each model's performance on each fold of the training data
+5. Compare baseline model performances and eliminate clearly unsuitable models
+6. Fine-tune promising model families using CV hyperparameter search methods on the training data
+7. Evaluate each model's performance on the validation data (since they have been fine-tuned on the training data)
+8. Compare fine-tuned model performances and choose the best model
+9. Re-train the chosen model using the fine-tuned hyperparameters on the combined training and validation set
+10. Final evaluation of the re-trained, chosen model on the test data
+
+## Model Evaluation Metrics
+1. Accuracy
+2. Precision
+3. Recall
+4. F1 Score
